@@ -1,0 +1,34 @@
+﻿@model  List<Restuarant_Managment_System.RS.Feedback>
+@{
+    ViewBag.Title = "FeedbackList";
+}
+
+<h2>FeedbackList</h2>
+<style>
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th {
+        height: 70px;
+    }
+</style>
+
+<table class="table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Feedback</th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.Id</th>
+            <th>@item.Feedb</th>
+
+        </tr>
+    }
+</table>

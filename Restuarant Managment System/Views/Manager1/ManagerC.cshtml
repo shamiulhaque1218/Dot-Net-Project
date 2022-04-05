@@ -1,0 +1,53 @@
+﻿@model Restuarant_Managment_System.RS.Manager
+
+
+
+@{
+
+    ViewBag.Title = "ManagerC";
+
+}
+
+
+
+<h2>Manager</h2>
+
+
+
+
+
+<form action="/Manager1/AddManagerC" method="post">
+
+
+
+
+
+    Id: <input type="text" name="Id" value="" class="form-control" />
+
+    @Html.ValidationMessageFor(m => m.Id, "", new { @class = "text-danger" })
+
+    User Name: <input type="text" name="Uname" value="" class="form-control" />
+
+    @Html.ValidationMessageFor(m => m.Uname, "", new { @class = "text-danger" })
+
+    <br>Email: <input type="text" name="Email" value="" class="form-control" />
+
+
+
+    <br>Phone: <input type="text" name="Phone" value="" class="form-control" />
+
+    @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
+
+    <br>Password: <input type="text" name="Pasword" value="" class="form-control" />
+
+    @Html.ValidationMessageFor(m => m.Pasword, "", new { @class = "text-danger" })
+
+
+
+
+
+    <input type="submit" value="Add" class="btn btn-primary" />
+
+
+
+</form> 

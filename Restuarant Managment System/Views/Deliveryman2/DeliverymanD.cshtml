@@ -1,0 +1,51 @@
+﻿@model Restuarant_Managment_System.RS.Deliveryman
+
+
+
+@{
+
+    ViewBag.Title = "DeliverymanD";
+
+}
+
+
+
+<h2>Deliveryman</h2>
+
+
+
+<form action="/Deliveryman2/AddDeliverymanD" method="post">
+
+
+
+
+
+    Id: <input type="text" name="Id" value="" class="form-control" />
+
+    @Html.ValidationMessageFor(m => m.Id, "", new { @class = "text-danger" })
+
+    Name: <input type="text" name="Name" value="" class="form-control" />
+
+    @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+
+    <br>Address: <input type="text" name="Address" value="" class="form-control" />
+
+
+
+    <br>Phone: <input type="text" name="Phone" value="" class="form-control" />
+
+    @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
+
+    <br>Password: <input type="text" name="Password" value="" class="form-control" />
+
+    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+
+
+
+
+
+    <input type="submit" value="Add" class="btn btn-primary" />
+
+
+
+</form> 

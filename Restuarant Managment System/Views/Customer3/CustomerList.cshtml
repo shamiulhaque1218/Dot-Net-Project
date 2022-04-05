@@ -1,0 +1,43 @@
+﻿@model   List<Restuarant_Managment_System.RS.Customer>
+@{
+    ViewBag.Title = "CustomerList";
+}
+
+<h2>Customer List</h2>
+<style>
+    
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th {
+        height: 70px;
+    }
+</style>
+
+<table class="table-hover">
+    <tr >
+        <th > Id</th>
+        <th> Name</th>
+        <th>Address </th>
+        <th> Phone</th>
+        <th> Password</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.Id</th>
+            <th>@item.Name</th>
+            <th>@item.Address </th>
+            <th>@item.Phone</th>
+            <th>@item.Password</th>
+            <th>
+                <a href="@Url.Action("CustomerC", new { item.Id,item.Name,item.Address,item.Phone,item.Password})" class="btn btn-success">Edit</a>
+                <a href="@Url.Action("Delete",new { item.Id})" class="btn btn-danger">Delete</a>
+            </th>
+        </tr>
+    }
+</table>
